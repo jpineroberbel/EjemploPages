@@ -1,8 +1,9 @@
 
- /* 
-    urlApi = "https://api.allorigins.win/get?url="+encodeURIComponent("https://newsapi.org/v2/everything?q=bitcoin&apiKey=6db6a643cb304edda455c178f88113fd");
-    
 
+    urlApi = "https://api.allorigins.win/get?callback=myFunc&url="+encodeURIComponent("https://newsapi.org/v2/everything?q=bitcoin&apiKey=6db6a643cb304edda455c178f88113fd");
+    
+ function myFunc(a)
+ {console.log(a)}
     function loadDoc() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -18,10 +19,3 @@
         xhttp.open("GET", urlApi, true);
         xhttp.send();
       }
- */
-fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wikipedia.org')}`)
-                    .then(response => {
-                      if (response.ok) return response.json()
-                      throw new Error('Network response was not ok.')
-                    })
-                    .then(data => console.log(JSON.parse(data.contents)));
