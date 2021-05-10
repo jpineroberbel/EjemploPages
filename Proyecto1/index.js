@@ -1,6 +1,6 @@
 
 
-    urlApi = "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=bitcoin&apiKey=6db6a643cb304edda455c178f88113fd"
+    urlApi = "http://api.allorigins.win/get?url=https://newsapi.org/v2/everything?q=bitcoin&apiKey=6db6a643cb304edda455c178f88113fd"
     
 
     function loadDoc() {
